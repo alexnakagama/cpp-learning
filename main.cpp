@@ -1,5 +1,6 @@
 #include <iostream> // import iostream library
 #include <ostream>
+#include <string>
 
 // g++ main.cpp -o main
 // this commands compiles my code into a binary executable file named main
@@ -38,6 +39,18 @@ int main() {
     std::cout << number << std::endl;
     std::cout << decimalNumber << std::endl;
     std::cout << isTrue << std::endl;
+
+    // brace initialization
+    // it prohibits narrowing conversion preventing data loss
+    // its prefered in modern c++
+    int myAge{20};
+    std::string myName; // string is not a primitive datatype
+
+    std::cout << "Introduce your name: ";
+    std::cin >> myName; // cin waits for user input
+
+    std::cout << "My name is " << myName << "and my age is " << myAge
+              << std::endl;
 
     return 0;
 }
