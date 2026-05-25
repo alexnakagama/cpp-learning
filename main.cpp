@@ -1,4 +1,5 @@
 #include <iostream> // import iostream library
+#include <ostream>
 
 // g++ main.cpp -o main
 // this commands compiles my code into a binary executable file named main
@@ -12,6 +13,31 @@ int main() {
     // logging info
     std::cout << "My name is alex\n";
     std::cout << "Im 20 years old." << std::endl;
+
+    // 1 bytes
+    char letter;
+    letter = 'a';
+
+    // 4 bytes
+    // we also have short(2 bytes) long(4 bytes) and long long(8 bytes)
+    int number;
+    number = 150;
+
+    // 4 bytes
+    float decimalNumber = 2.22;
+
+    // 1 byte
+    bool isTrue = true;
+    bool isFalse = false;
+
+    // char letter = 'a' is declaring a variable
+    // a variable is a space in the ram memory with a name(letter)
+    // and a memory address
+
+    std::cout << letter << std::endl;
+    std::cout << number << std::endl;
+    std::cout << decimalNumber << std::endl;
+    std::cout << isTrue << std::endl;
 
     return 0;
 }
