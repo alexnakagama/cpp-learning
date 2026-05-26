@@ -1,7 +1,12 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
 int main() {
-    // for, while, do while
+    // for, for each, while, do while
+
+    std::vector<int> numbers{5, 2, 62, 623, 7, 12};
+    std::vector<std::string> people{"Sofia", "Javier", "Sebastian", "Ana"};
 
     int myNum{};
 
@@ -16,17 +21,25 @@ int main() {
         std::cin >> myNum;
     }
 
+    std::cout << "Congrats you guessed the number!\n";
+
+    std::string personGuess{};
+
     do {
-        std::cout << "Guess the number 2: ";
-        std::cin >> myNum;
+        std::cout << "Enter name: ";
+        std::cin >> personGuess;
 
-        if (myNum != 3) {
-            std::cout << "Wrong very wrong\n";
+        if (personGuess != people[3]) {
+            std::cout << "Incorrect\n";
         }
+    } while (personGuess != people[3]);
 
-    } while (myNum != 3);
-
-    std::cout << "Congrats you guessed the number" << std::endl;
+    for (int num : numbers) {
+        if (num == 12) {
+            std::cout << "Found the number 12";
+            break;
+        }
+    }
 
     return 0;
 }
