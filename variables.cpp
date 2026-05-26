@@ -1,4 +1,8 @@
-#include <iostream> // import iostream library
+#include <iostream>
+
+// tells the C++ preprocessor to copy and paste the entire content of
+// the specified header file directly into your source code,
+
 #include <ostream>
 #include <string>
 
