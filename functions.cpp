@@ -1,14 +1,15 @@
 #include <iostream>
 
-int sum(int num1, int num2) { return num1 + num2; }
+inline int sum(int num1, int num2) { return num1 + num2; }
 
-int res(int num1, int num2) { return num1 - num2; }
+inline int res(int num1, int num2) { return num1 - num2; }
 
-float multi(float num1, float num2) { return num1 * num2; }
+inline float multi(float num1, float num2) { return num1 * num2; }
 
 float div(float num1, float num2) {
     if (num2 <= 0) {
         std::cout << "You cant divide with 0" << std::endl;
+        return 0.0f;
     }
     return num1 / num2;
 }
