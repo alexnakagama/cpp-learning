@@ -15,5 +15,15 @@ int main() {
 
     std::cout << "matrix[1] ahora es: " << matrix[1] << std::endl;
 
+    // classic for loop
+    for (int i = 0; i < 3; i++) {
+        std::cout << "position " << i << ": " << matrix[i] << "\n";
+    }
+
+    // modern for loop
+    for (int num : matrix) {
+        std::cout << num << '\n';
+    }
+
     return 0;
 }
