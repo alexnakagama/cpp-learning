@@ -48,4 +48,14 @@ int main() {
 
     // print the value of who the pointer is pointing to
     std::cout << *ptrNumbers << "\n";
+
+    // print the memory address + 1, so the memory address of the second element
+    std::cout << (ptrNumbers + 1) << "\n";
+
+    // print the value stored in the memory address + 1
+    std::cout << *(ptrNumbers + 1) << "\n";
+
+    // print the value stored in memory address 2
+    // equivalent to std::cout << *(ptrNumbers+2) << "\n";
+    std::cout << ptrNumbers[2] << "\n";
 }
