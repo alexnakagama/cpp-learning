@@ -29,9 +29,9 @@ int main() {
               << "\n"; // print the value of who the pointer is pointing to
 
     *ptr = 15; // change the var value from the pointer
-    std::cout << *ptr << std::endl;
+    std::cout << *ptr << "\n";
 
     // call miFunction with the memory address of num
     miFunction(&num);
-    std::cout << num << std::endl; // instead of returning 55 it returns 70
+    std::cout << num << "\n"; // instead of returning 55 it returns 70
 }
