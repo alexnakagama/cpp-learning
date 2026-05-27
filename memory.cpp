@@ -58,4 +58,7 @@ int main() {
     // print the value stored in memory address 2
     // equivalent to std::cout << *(ptrNumbers+2) << "\n";
     std::cout << ptrNumbers[2] << "\n";
+
+    delete ptrNumbers;
+    ptrNumbers = nullptr;
 }
