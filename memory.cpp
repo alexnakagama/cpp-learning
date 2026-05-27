@@ -29,4 +29,23 @@ int main() {
 
     // intPtr no longer points to a valid memory address in the heap
     intPtr = nullptr;
+
+    // an array is a pointer to the first element of the array
+    // numbers is a pointer to element [0]
+    int numbers[]{100, 20, 30};
+
+    // prints the memory direction of the first element of the array
+    std::cout << numbers << "\n";
+
+    // print the value stored at that address, 100
+    std::cout << *numbers << "\n";
+
+    // create a pointer pointing to numbers
+    int *ptrNumbers{numbers};
+
+    // print the memory address the pointer is pointing to
+    std::cout << ptrNumbers << "\n";
+
+    // print the value of who the pointer is pointing to
+    std::cout << *ptrNumbers << "\n";
 }
