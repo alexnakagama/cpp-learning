@@ -34,6 +34,9 @@ int main() {
   *ptr = 15; // change the var value from the pointer
   std::cout << *ptr << "\n";
 
+  delete ptr;
+  ptr = nullptr;
+
   // call miFunction with the memory address of num
   miFunction(&num);
   std::cout << num << "\n"; // instead of returning 55 it returns 70
@@ -51,6 +54,9 @@ int main() {
 
   // the pointer can change the memory address its pointing to
   ptrToConst = &salary;
+
+  delete ptrToConst;
+  ptrToConst = nullptr;
 
   int myNumber{1000};
 
