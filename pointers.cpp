@@ -5,6 +5,9 @@ int num{55};
 // function to which you pass a pointer to num and it sums 15
 void miFunction(int *num) { *num = *num + 15; }
 
+// function that receives a pointer as a parameter and increments 5 to the value
+void addFive(int *value) { *value += 5; }
+
 int main() {
   // pointers is a variable that stores the memory address of another variable
 
@@ -59,4 +62,11 @@ int main() {
 
   // we can change the value
   *ptrConst = 1500;
+
+  int value{10};
+  std::cout << "Value before addValue: " << value << "\n";
+  // passing the memory address of value, pointer is a variable storing a mem
+  // address
+  addFive(&value);
+  std::cout << "Value after addValue: " << value << "\n";
 }
