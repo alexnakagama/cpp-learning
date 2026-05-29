@@ -71,7 +71,7 @@ int main() {
 
   int value{10};
   std::cout << "Value before changeValue: " << value << "\n";
-  // passing the memory address of value, pointer is a variable storing a mem
+  // passing the memory address of value, pointer is a variable storing a memory
   // address
   changeValue(&value);
   std::cout << "Value after changeValue: " << value << "\n";
