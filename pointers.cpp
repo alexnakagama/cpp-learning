@@ -48,4 +48,15 @@ int main() {
 
   // the pointer can change the memory address its pointing to
   ptrToConst = &salary;
+
+  int myNumber{1000};
+
+  // create a constant pointer
+  int *const ptrConst{&myNumber};
+
+  // ptrConst = &otherNum; this will not compile because the memory address the
+  // pointer is pointing cannot be changed
+
+  // we can change the value
+  *ptrConst = 1500;
 }
