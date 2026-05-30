@@ -99,4 +99,12 @@ int main() {
   // address
   changeValue(&value);
   std::cout << "Value after changeValue: " << value << "\n";
+
+  // pointer pitfalls
+  // 1. Dereferencing a null pointer
+  // 2. Memory leak
+  // 3. Buffer overflow
+  // 4. Double free
+  // 5. Dangling pointer
+  // 6. Access violation
 }
