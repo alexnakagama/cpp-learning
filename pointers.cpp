@@ -2,6 +2,26 @@
 
 int num{55};
 
+// car class
+class Car {
+  // property of the car
+private:
+  std::string model;
+
+  // constructor
+public:
+  Car(std::string mod) : model(mod) {}
+
+  // method getModel, returns model
+  std::string getModel() const { return model; }
+};
+
+// this function creates a new car and returns a pointer pointing to it
+Car *createCar(std::string model) {
+  Car *newCar{new Car(model)};
+  return newCar;
+}
+
 // function to which you pass a pointer to num and it sums 15
 void miFunction(int *num) { *num = *num + 15; }
 
@@ -9,6 +29,16 @@ void miFunction(int *num) { *num = *num + 15; }
 void changeValue(int *value) { *value += 5; }
 
 int main() {
+  // create a car calling the function
+  Car *myCar = createCar("Honda");
+
+  // accessing model through the pointer and show the model
+  std::cout << "myCar model: " << myCar->getModel() << "\n";
+
+  // its important to free the memory when its not used
+  delete myCar;
+  myCar = nullptr;
+
   // pointers is a variable that stores the memory address of another variable
 
   // dynamic memory management
@@ -34,9 +64,6 @@ int main() {
   *ptr = 15; // change the var value from the pointer
   std::cout << *ptr << "\n";
 
-  delete ptr;
-  ptr = nullptr;
-
   // call miFunction with the memory address of num
   miFunction(&num);
   std::cout << num << "\n"; // instead of returning 55 it returns 70
@@ -54,9 +81,6 @@ int main() {
 
   // the pointer can change the memory address its pointing to
   ptrToConst = &salary;
-
-  delete ptrToConst;
-  ptrToConst = nullptr;
 
   int myNumber{1000};
 
